@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <HorizontalStackLayout>
+                <Picker x:Name="Picker" SelectedIndexChanged="Picker_SelectedIndexChanged" ItemsSource="{Binding people}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding MM}" Title="Выберите человека"></Picker>
+            </HorizontalStackLayout>
+
+            <VerticalStackLayout WidthRequest="200" HeightRequest="500">
+                <Entry x:Name="EntryName" Text="{Binding MM.Name}"></Entry>
+                <Entry x:Name="EntrySurname" Text="{Binding MM.Surname}"></Entry>
+                <Entry x:Name="EntryPatronymic" Text="{Binding MM.Patronymic}"></Entry>
+                <Entry x:Name="EntrySource" Text="{Binding MM.Source}"></Entry>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout WidthRequest="200" HeightRequest="500" Margin="20">
+                <Label x:Name="LabelName" Text="{Binding MM.Name}"></Label>
+                <Label x:Name="LabelSurname" Text="{Binding MM.Surname}"></Label>
+                <Label x:Name="LabelPatronymic" Text="{Binding MM.Patronymic}"></Label>
+
+
+                <!--<Label x:Name="Test"></Label>-->
+            </VerticalStackLayout>
+
+            <VerticalStackLayout WidthRequest="200" HeightRequest="500">
+                <Image x:Name="Image" Source="{Binding MM.Source}"></Image>
+            </VerticalStackLayout>
+            
+            
+            
+            
+        </HorizontalStackLayout>
+        
+       
+    </ScrollView>
+
+</ContentPage>
